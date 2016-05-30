@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Cryptos View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CryptosViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,141 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cryptos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVK-Pg-TNj">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Texto plano" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0V0-iV-SSB">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Texto encriptado" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="64g-dn-KR3">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pa2-1u-43k">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Procesar"/>
+                                <connections>
+                                    <action selector="procesarTexto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NxZ-uc-sCe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn5-Id-Hjf">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Limpiar campos"/>
+                                <connections>
+                                    <action selector="limpiarCampos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s2B-lP-QWa"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Llave" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fEt-TB-Zb8">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="tLk-3g-BS9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="tLk-3g-BS9"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="tLk-3g-BS9"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pa2-1u-43k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6dH-L3-Pdx"/>
+                            <constraint firstItem="Nn5-Id-Hjf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7d7-03-Ldt"/>
+                            <constraint firstItem="0V0-iV-SSB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9LA-sM-o7D"/>
+                            <constraint firstItem="NVK-Pg-TNj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="AeL-KC-iZR"/>
+                            <constraint firstItem="fEt-TB-Zb8" firstAttribute="top" secondItem="NVK-Pg-TNj" secondAttribute="bottom" constant="8" id="GiI-2G-Xra"/>
+                            <constraint firstItem="64g-dn-KR3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="J3F-7q-Z5R"/>
+                            <constraint firstItem="64g-dn-KR3" firstAttribute="top" secondItem="pa2-1u-43k" secondAttribute="bottom" constant="8" id="LdQ-V6-aeH"/>
+                            <constraint firstItem="64g-dn-KR3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Rxh-13-HE5"/>
+                            <constraint firstItem="0V0-iV-SSB" firstAttribute="top" secondItem="fEt-TB-Zb8" secondAttribute="bottom" constant="8" id="a8o-Ea-JQR"/>
+                            <constraint firstItem="NVK-Pg-TNj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="dvD-f8-63M"/>
+                            <constraint firstItem="pa2-1u-43k" firstAttribute="top" secondItem="0V0-iV-SSB" secondAttribute="bottom" constant="8" id="ew0-PX-BUr"/>
+                            <constraint firstItem="NVK-Pg-TNj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="i9U-yE-qJe"/>
+                            <constraint firstItem="Nn5-Id-Hjf" firstAttribute="top" secondItem="64g-dn-KR3" secondAttribute="bottom" constant="8" id="iH2-F6-qg8"/>
+                            <constraint firstItem="NVK-Pg-TNj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t8O-4Q-ka3"/>
+                            <constraint firstItem="fEt-TB-Zb8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wIy-kA-SdI"/>
+                            <constraint firstItem="0V0-iV-SSB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="zbc-BT-RgK"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="NVK-Pg-TNj"/>
+                                <exclude reference="0V0-iV-SSB"/>
+                                <exclude reference="64g-dn-KR3"/>
+                                <exclude reference="pa2-1u-43k"/>
+                                <exclude reference="Nn5-Id-Hjf"/>
+                                <exclude reference="fEt-TB-Zb8"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="AeL-KC-iZR"/>
+                                <exclude reference="dvD-f8-63M"/>
+                                <exclude reference="i9U-yE-qJe"/>
+                                <exclude reference="t8O-4Q-ka3"/>
+                                <exclude reference="GiI-2G-Xra"/>
+                                <exclude reference="wIy-kA-SdI"/>
+                                <exclude reference="9LA-sM-o7D"/>
+                                <exclude reference="a8o-Ea-JQR"/>
+                                <exclude reference="zbc-BT-RgK"/>
+                                <exclude reference="6dH-L3-Pdx"/>
+                                <exclude reference="ew0-PX-BUr"/>
+                                <exclude reference="J3F-7q-Z5R"/>
+                                <exclude reference="LdQ-V6-aeH"/>
+                                <exclude reference="Rxh-13-HE5"/>
+                                <exclude reference="7d7-03-Ldt"/>
+                                <exclude reference="iH2-F6-qg8"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="NVK-Pg-TNj"/>
+                                <include reference="0V0-iV-SSB"/>
+                                <include reference="64g-dn-KR3"/>
+                                <include reference="pa2-1u-43k"/>
+                                <include reference="Nn5-Id-Hjf"/>
+                                <include reference="fEt-TB-Zb8"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="AeL-KC-iZR"/>
+                                <include reference="dvD-f8-63M"/>
+                                <include reference="i9U-yE-qJe"/>
+                                <exclude reference="t8O-4Q-ka3"/>
+                                <include reference="GiI-2G-Xra"/>
+                                <include reference="wIy-kA-SdI"/>
+                                <include reference="9LA-sM-o7D"/>
+                                <include reference="a8o-Ea-JQR"/>
+                                <include reference="zbc-BT-RgK"/>
+                                <include reference="6dH-L3-Pdx"/>
+                                <include reference="ew0-PX-BUr"/>
+                                <include reference="J3F-7q-Z5R"/>
+                                <include reference="LdQ-V6-aeH"/>
+                                <include reference="Rxh-13-HE5"/>
+                                <include reference="7d7-03-Ldt"/>
+                                <include reference="iH2-F6-qg8"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="campoCrypt" destination="64g-dn-KR3" id="atQ-9E-ZX4"/>
+                        <outlet property="campoLlave" destination="fEt-TB-Zb8" id="uUU-LV-JlZ"/>
+                        <outlet property="campoPlano" destination="0V0-iV-SSB" id="yxu-Sa-5Fe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="564" y="442"/>
         </scene>
     </scenes>
 </document>

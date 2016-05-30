@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		32DE91621CF817CB00505457 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DE91611CF817CB00505457 /* main.m */; };
 		32DE91651CF817CB00505457 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DE91641CF817CB00505457 /* AppDelegate.m */; };
-		32DE91681CF817CB00505457 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DE91671CF817CB00505457 /* ViewController.m */; };
+		32DE91681CF817CB00505457 /* CryptosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DE91671CF817CB00505457 /* CryptosViewController.m */; };
 		32DE916B1CF817CB00505457 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32DE91691CF817CB00505457 /* Main.storyboard */; };
-		32DE916D1CF817CB00505457 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32DE916C1CF817CB00505457 /* Assets.xcassets */; };
 		32DE91701CF817CB00505457 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32DE916E1CF817CB00505457 /* LaunchScreen.storyboard */; };
 		32DE917B1CF817CC00505457 /* CryptosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DE917A1CF817CC00505457 /* CryptosTests.m */; };
 		32DE91861CF817CC00505457 /* CryptosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DE91851CF817CC00505457 /* CryptosUITests.m */; };
+		32DE91941CF8D50F00505457 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32DE91931CF8D50F00505457 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +39,9 @@
 		32DE91611CF817CB00505457 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32DE91631CF817CB00505457 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		32DE91641CF817CB00505457 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		32DE91661CF817CB00505457 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		32DE91671CF817CB00505457 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		32DE91661CF817CB00505457 /* CryptosViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CryptosViewController.h; sourceTree = "<group>"; };
+		32DE91671CF817CB00505457 /* CryptosViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CryptosViewController.m; sourceTree = "<group>"; };
 		32DE916A1CF817CB00505457 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		32DE916C1CF817CB00505457 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32DE916F1CF817CB00505457 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32DE91711CF817CB00505457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32DE91761CF817CC00505457 /* CryptosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +50,7 @@
 		32DE91811CF817CC00505457 /* CryptosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32DE91851CF817CC00505457 /* CryptosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CryptosUITests.m; sourceTree = "<group>"; };
 		32DE91871CF817CC00505457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32DE91931CF8D50F00505457 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +101,11 @@
 		32DE915F1CF817CB00505457 /* Cryptos */ = {
 			isa = PBXGroup;
 			children = (
-				32DE91631CF817CB00505457 /* AppDelegate.h */,
-				32DE91641CF817CB00505457 /* AppDelegate.m */,
-				32DE91661CF817CB00505457 /* ViewController.h */,
-				32DE91671CF817CB00505457 /* ViewController.m */,
+				32DE91661CF817CB00505457 /* CryptosViewController.h */,
+				32DE91671CF817CB00505457 /* CryptosViewController.m */,
 				32DE91691CF817CB00505457 /* Main.storyboard */,
-				32DE916C1CF817CB00505457 /* Assets.xcassets */,
 				32DE916E1CF817CB00505457 /* LaunchScreen.storyboard */,
-				32DE91711CF817CB00505457 /* Info.plist */,
+				32DE91931CF8D50F00505457 /* Assets.xcassets */,
 				32DE91601CF817CB00505457 /* Supporting Files */,
 			);
 			path = Cryptos;
@@ -117,6 +114,9 @@
 		32DE91601CF817CB00505457 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				32DE91631CF817CB00505457 /* AppDelegate.h */,
+				32DE91641CF817CB00505457 /* AppDelegate.m */,
+				32DE91711CF817CB00505457 /* Info.plist */,
 				32DE91611CF817CB00505457 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -207,6 +207,7 @@
 				TargetAttributes = {
 					32DE915C1CF817CB00505457 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = W5SWU29W6D;
 					};
 					32DE91751CF817CC00505457 = {
 						CreatedOnToolsVersion = 7.3;
@@ -244,7 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32DE91701CF817CB00505457 /* LaunchScreen.storyboard in Resources */,
-				32DE916D1CF817CB00505457 /* Assets.xcassets in Resources */,
+				32DE91941CF8D50F00505457 /* Assets.xcassets in Resources */,
 				32DE916B1CF817CB00505457 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,7 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32DE91681CF817CB00505457 /* ViewController.m in Sources */,
+				32DE91681CF817CB00505457 /* CryptosViewController.m in Sources */,
 				32DE91651CF817CB00505457 /* AppDelegate.m in Sources */,
 				32DE91621CF817CB00505457 /* main.m in Sources */,
 			);
@@ -413,10 +414,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Cryptos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rdiaz.Cryptos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -424,10 +428,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Cryptos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rdiaz.Cryptos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
