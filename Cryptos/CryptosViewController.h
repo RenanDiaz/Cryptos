@@ -10,8 +10,8 @@
 
 @interface CryptosViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *campoLlave;
-@property (weak, nonatomic) IBOutlet UITextField *campoPlano;
-@property (weak, nonatomic) IBOutlet UITextField *campoCrypt;
+@property (weak, nonatomic) IBOutlet UITextView *campoPlano;
+@property (weak, nonatomic) IBOutlet UITextView *campoCrypt;
 - (IBAction)procesarTexto:(id)sender;
 - (IBAction)limpiarCampos:(id)sender;
 

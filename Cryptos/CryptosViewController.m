@@ -41,22 +41,23 @@
 }
 
 - (NSString *)encrypt:(NSString *)text withKey:(NSString *)key {
+    int chars = (int)text.length;
     int maxCount = (int)key.length;
-    unichar keyList[key.length];
+    unichar keyList[maxCount];
     for(int i = 0; i < maxCount; i++) {
         keyList[i] = [key characterAtIndex:i];
     }
     
-    char res[text.length];
+    unichar res[chars];
     int j = 0;
-    for(int i = 0; i < text.length; i++) {
+    for(int i = 0; i < chars; i++) {
         unichar code = [text characterAtIndex:i];
         unichar key = keyList[j];
         
         if(key % 2 == 0) {
-            res[i] = (char)(key + code);
+            res[i] = (unichar)(code + key);
         } else {
-            res[i] = (char)(key - code);
+            res[i] = (unichar)(code - key);
         }
         
         j++;
@@ -66,26 +67,27 @@
         }
     }
     
-    return [[NSString alloc] initWithFormat:@"%s", res];
+    return [NSString stringWithCharacters:res length:chars];
 }
 
 - (NSString *)decrypt:(NSString *)text withKey:(NSString *)key {
+    int chars = (int)text.length;
     int maxCount = (int)key.length;
-    unichar keyList[key.length];
+    unichar keyList[maxCount];
     for(int i = 0; i < maxCount; i++) {
         keyList[i] = [key characterAtIndex:i];
     }
     
-    char res[text.length];
+    unichar res[chars];
     int j = 0;
-    for(int i = 0; i < text.length; i++) {
+    for(int i = 0; i < chars; i++) {
         unichar code = [text characterAtIndex:i];
         unichar key = keyList[j];
         
         if(key % 2 == 0) {
-            res[i] = (char)(key - code);
+            res[i] = (unichar)(code - key);
         } else {
-            res[i] = (char)(key + code);
+            res[i] = (unichar)(code + key);
         }
         
         j++;
@@ -95,6 +97,6 @@
         }
     }
     
-    return [[NSString alloc] initWithFormat:@"%s", res];
+    return [NSString stringWithCharacters:res length:chars];
 }
 @end
