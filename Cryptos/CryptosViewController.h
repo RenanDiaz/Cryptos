@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CryptosViewController : UIViewController
+@interface CryptosViewController : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *campoLlave;
 @property (weak, nonatomic) IBOutlet UITextView *campoPlano;
 @property (weak, nonatomic) IBOutlet UITextView *campoCrypt;
 - (IBAction)procesarTexto:(id)sender;
-- (IBAction)limpiarCampos:(id)sender;
-
+- (IBAction)limpiarCampoPlano:(id)sender;
+- (IBAction)limpiarCampoCrypt:(id)sender;
 
 @end
 

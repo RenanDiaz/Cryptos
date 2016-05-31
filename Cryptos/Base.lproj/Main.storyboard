@@ -38,7 +38,7 @@
                                     <constraint firstAttribute="width" constant="172" id="tLk-3g-BS9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="tLk-3g-BS9"/>
@@ -50,33 +50,19 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sqf-nZ-xss">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="dHf-MD-mDE"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="dHf-MD-mDE"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="dHf-MD-mDE"/>
-                                    </mask>
-                                </variation>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uk4-Pu-08l">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn5-Id-Hjf">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Limpiar"/>
+                                <connections>
+                                    <action selector="limpiarCampoPlano:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dQX-5s-uwi"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uk4-Pu-08l">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="zJi-36-Yeg"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
@@ -90,29 +76,52 @@
                                     </mask>
                                 </variation>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn5-Id-Hjf">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sqf-nZ-xss">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="dHf-MD-mDE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dHf-MD-mDE"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="dHf-MD-mDE"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txv-Dl-bTV">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Limpiar campos"/>
+                                <state key="normal" title="Limpiar"/>
                                 <connections>
-                                    <action selector="limpiarCampos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s2B-lP-QWa"/>
+                                    <action selector="limpiarCampoCrypt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dkk-Q7-fcr"/>
+                                    <action selector="limpiarCampos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UB9-vh-LoE"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Uk4-Pu-08l" firstAttribute="top" secondItem="Nn5-Id-Hjf" secondAttribute="bottom" constant="8" id="1RD-pJ-LzU"/>
                             <constraint firstItem="Uk4-Pu-08l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6bv-wZ-wn9"/>
                             <constraint firstItem="pa2-1u-43k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6dH-L3-Pdx"/>
-                            <constraint firstItem="Nn5-Id-Hjf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7d7-03-Ldt"/>
                             <constraint firstItem="NVK-Pg-TNj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="AeL-KC-iZR"/>
                             <constraint firstItem="sqf-nZ-xss" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Azk-uM-v5M"/>
                             <constraint firstItem="fEt-TB-Zb8" firstAttribute="top" secondItem="NVK-Pg-TNj" secondAttribute="bottom" constant="8" id="GiI-2G-Xra"/>
+                            <constraint firstItem="Txv-Dl-bTV" firstAttribute="top" secondItem="Uk4-Pu-08l" secondAttribute="bottom" constant="8" symbolic="YES" id="KMD-Ka-Vpm"/>
                             <constraint firstItem="sqf-nZ-xss" firstAttribute="top" secondItem="fEt-TB-Zb8" secondAttribute="bottom" constant="8" id="S7Q-KQ-AYq"/>
                             <constraint firstItem="sqf-nZ-xss" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SdG-xd-3cW"/>
                             <constraint firstItem="Uk4-Pu-08l" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="W8C-kd-hXd"/>
-                            <constraint firstItem="NVK-Pg-TNj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="dvD-f8-63M"/>
                             <constraint firstItem="NVK-Pg-TNj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="i9U-yE-qJe"/>
+                            <constraint firstItem="NVK-Pg-TNj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="jRi-Dq-7gw"/>
                             <constraint firstItem="pa2-1u-43k" firstAttribute="top" secondItem="sqf-nZ-xss" secondAttribute="bottom" constant="8" id="jcd-HZ-TQ0"/>
-                            <constraint firstItem="Nn5-Id-Hjf" firstAttribute="top" secondItem="Uk4-Pu-08l" secondAttribute="bottom" constant="8" id="oOf-7i-YPB"/>
+                            <constraint firstItem="Nn5-Id-Hjf" firstAttribute="top" secondItem="sqf-nZ-xss" secondAttribute="bottom" constant="8" id="kre-Km-YwT"/>
+                            <constraint firstItem="Nn5-Id-Hjf" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="nFA-5q-wOu"/>
+                            <constraint firstItem="Txv-Dl-bTV" firstAttribute="trailing" secondItem="Uk4-Pu-08l" secondAttribute="trailing" id="nI9-Du-wga"/>
                             <constraint firstItem="Uk4-Pu-08l" firstAttribute="top" secondItem="pa2-1u-43k" secondAttribute="bottom" constant="8" id="rie-6U-bFQ"/>
                             <constraint firstItem="NVK-Pg-TNj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t8O-4Q-ka3"/>
                             <constraint firstItem="fEt-TB-Zb8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wIy-kA-SdI"/>
@@ -122,13 +131,13 @@
                                 <exclude reference="NVK-Pg-TNj"/>
                                 <exclude reference="pa2-1u-43k"/>
                                 <exclude reference="fEt-TB-Zb8"/>
-                                <exclude reference="sqf-nZ-xss"/>
-                                <exclude reference="Uk4-Pu-08l"/>
                                 <exclude reference="Nn5-Id-Hjf"/>
+                                <exclude reference="Uk4-Pu-08l"/>
+                                <exclude reference="sqf-nZ-xss"/>
+                                <exclude reference="Txv-Dl-bTV"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="AeL-KC-iZR"/>
-                                <exclude reference="dvD-f8-63M"/>
                                 <exclude reference="i9U-yE-qJe"/>
                                 <exclude reference="t8O-4Q-ka3"/>
                                 <exclude reference="GiI-2G-Xra"/>
@@ -138,11 +147,14 @@
                                 <exclude reference="SdG-xd-3cW"/>
                                 <exclude reference="6dH-L3-Pdx"/>
                                 <exclude reference="jcd-HZ-TQ0"/>
+                                <exclude reference="1RD-pJ-LzU"/>
                                 <exclude reference="6bv-wZ-wn9"/>
                                 <exclude reference="W8C-kd-hXd"/>
                                 <exclude reference="rie-6U-bFQ"/>
-                                <exclude reference="7d7-03-Ldt"/>
-                                <exclude reference="oOf-7i-YPB"/>
+                                <exclude reference="kre-Km-YwT"/>
+                                <exclude reference="nFA-5q-wOu"/>
+                                <exclude reference="KMD-Ka-Vpm"/>
+                                <exclude reference="nI9-Du-wga"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -150,13 +162,13 @@
                                 <include reference="NVK-Pg-TNj"/>
                                 <include reference="pa2-1u-43k"/>
                                 <include reference="fEt-TB-Zb8"/>
-                                <include reference="sqf-nZ-xss"/>
-                                <include reference="Uk4-Pu-08l"/>
                                 <include reference="Nn5-Id-Hjf"/>
+                                <include reference="Uk4-Pu-08l"/>
+                                <include reference="sqf-nZ-xss"/>
+                                <include reference="Txv-Dl-bTV"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="AeL-KC-iZR"/>
-                                <include reference="dvD-f8-63M"/>
                                 <include reference="i9U-yE-qJe"/>
                                 <exclude reference="t8O-4Q-ka3"/>
                                 <include reference="GiI-2G-Xra"/>
@@ -166,11 +178,14 @@
                                 <include reference="SdG-xd-3cW"/>
                                 <include reference="6dH-L3-Pdx"/>
                                 <include reference="jcd-HZ-TQ0"/>
+                                <include reference="1RD-pJ-LzU"/>
                                 <include reference="6bv-wZ-wn9"/>
                                 <include reference="W8C-kd-hXd"/>
                                 <include reference="rie-6U-bFQ"/>
-                                <include reference="7d7-03-Ldt"/>
-                                <include reference="oOf-7i-YPB"/>
+                                <include reference="kre-Km-YwT"/>
+                                <include reference="nFA-5q-wOu"/>
+                                <include reference="KMD-Ka-Vpm"/>
+                                <include reference="nI9-Du-wga"/>
                             </mask>
                         </variation>
                     </view>
